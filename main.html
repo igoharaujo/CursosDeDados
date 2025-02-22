@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universo dos Dados</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    .space-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .space-background::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: move-stars 50s linear infinite;
+    }
+
+    @keyframes move-stars {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-50%);
+      }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.0);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    header nav ul li {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li:hover {
+      color: #ff6f61;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background: #07527280;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #169d52b3;
+    }
+
+    .trilhas-section, .courses-section, .features-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: hsla(191, 91%, 13%, 0.345);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.857);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="space-background"></div>
+
+
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h2>Explore o Universo dos Dados</h2>
+    <p>Da análise à engenharia, do SQL ao Machine Learning. Navegue pelo cosmos do conhecimento em dados.</p>
+    <button class="cta-button" onclick="window.location.href='https://www.eia.ai/a/or8kt'">Comece Sua Jornada</button>
+  </section>
+
+  <!-- Trilhas Section -->
+  <section class="trilhas-section">
+    <h2>Trilhas de Aprendizado</h2>
+    <div class="card-grid">
+      <div class="card" onclick="window.location.href='https://www.eia.ai/trilha-ciencia-de-dados/or8kt'">
+        <img src="img/datascience.png" alt="Ciência de Dados">
+        <h3>Ciência de Dados</h3>
+        <p>Domine Python, R e técnicas avançadas de análise de dados.</p>
+      </div>
+      <div class="card" onclick="window.location.href='https://www.eia.ai/trilha-analista-de-business-intelligence/or8kt'">
+        <img src="img/analise.png" alt="Analista de Dados e BI">
+        <h3>Analista de Dados e BI</h3>
+        <p>Transforme dados em insights de negócios com ferramentas modernas.</p>
+      </div>
+      <div class="card" onclick="window.location.href='https://www.eia.ai/formacao-machine-learning-com-aws-prep-certificacao/or8kt'">
+        <img src="img/aws.png" alt="Engenharia de Machine Learning">
+        <h3>Preparatório AWS Certified Machine Learning Specialty</h3>
+        <p>Este curso prepara você para a certificação "AWS Certified Machine Learning - MLS-C01" </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses-section">
+    <h2>Cursos em Destaque</h2>
+    <div class="card-grid">
+      <div class="card" onclick="window.location.href='https://www.eia.ai/formacao-profissional-python-2022-curso-completo-projetos/or8kt'">
+        <img src="./img/python.png" alt="Python">
+        <h3>Formação Python Profissional</h3>
+        <p>Curso completo com projetos práticos.</p>
+      </div>
+      <div class="card" onclick="window.location.href='https://www.eia.ai/databricks-com-spark-delta-lake-e-machine-learning-2023/or8kt'">
+        <img src="img/databrikcs.png" alt="Databricks">
+        <h3>Databricks com Spark</h3>
+        <p>Domine Spark, Delta Lake e Machine Learning.</p>
+      </div>
+      <div class="card" onclick="window.location.href='https://www.eia.ai/sql-moderno-e-completo-inclui-mais-de-300-atividades/or8kt'">
+        <img src="img/sql.png" alt="SQL">
+        <h3>SQL Moderno e Completo</h3>
+        <p>Mais de 300 atividades práticas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2>Adquira também</h2>
+    <div class="card-grid">
+      <div class="card" onclick="window.location.href='https://www.eia.ai/todos-os-cursos/or8kt'">
+        <h3>Acesso Vitalício</h3>
+        <p>Estude no seu ritmo com acesso permanente a todo o conteúdo.</p>
+      </div>
+      <div class="card" onclick="window.location.href='https://www.eia.ai/a/or8kt'">
+        <h3>Todos os cursos</h3>
+        <p>Descubra todos os cursos disponiveis</p>
+      </div>
+      <div class="card" onclick="window.location.href='https://www.eia.ai/assinatura/or8kt'">
+        <h3>Clube DataScience</h3>
+        <p>Acesse a materiais de qualidade para se preparar para este incrível mercado de trabalho na área de dados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 </p>
+  </footer>
+</body>
+</html>
